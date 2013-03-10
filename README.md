@@ -13,7 +13,8 @@ Implementation
 - **_task_card.html.haml** shows the basic task card markup
 - **show_task_board_view.html.haml** creates the layout of the swimlanes and task-cards within the lanes. `task_status_code` is a helper method which returns the status code, given the symbol.
 - **_task_board_view.sass** styles the cards and swimlanes. Yellow looks good. Isn't it?
-- Simply add a member route like 
+- Simply add a member route to `projects` resource -
+    <br>
     `get :task_board_view`
 - Controller action is implemented as follows (assuming `@current_project` denotes the current project for which task-board view is sought, path is type of `/projects/:id/task_board_view`)
 
