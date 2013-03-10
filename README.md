@@ -1,7 +1,7 @@
 trello-board
 ============
 
-A simple drag and drop task card app like Trello
+A simple drag and drop task card app like Trello (This has been extracted from [www.goachiev.com](www.goachiev.com))
 
 ![Task Board](https://dl.dropbox.com/u/27153018/trello-board-1.png)
 
