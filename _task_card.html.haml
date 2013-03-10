@@ -1,0 +1,5 @@
+- index ||= 0
+.task{:class => 'task_card', :'data-task-id' => task.id, :'data-project-task-path' => url_for([project, task.task_list, task])}
+  = link_to "#" do
+    %h2= task.name
+    %p= simple_format(task.first_comment.try(:body))

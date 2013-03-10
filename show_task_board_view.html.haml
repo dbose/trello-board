@@ -1,0 +1,19 @@
+.show_project_task_board_view
+  .swim_lane{:id => "swim_lane_#{:backlog.to_s}", :'data-id' => task_status_code(:backlog)}
+    .name= :backlog.to_s.titleize
+    .tasks{:class => 'task_card_container'}
+      - @backlogs.each do |backlog|
+        = render "tasks/task_card", :task => backlog, :project => @current_project
+
+
+  .swim_lane{:id => "swim_lane_#{:open.to_s}", :'data-id' => task_status_code(:open)}
+    .name= :in_progress.to_s.titleize
+    .tasks{:class => 'task_card_container'}
+      - @active_tasks.each do |active_task|
+        = render "tasks/task_card", :task => active_task, :project => @current_project
+
+  .swim_lane{:id => "swim_lane_#{:resolved.to_s}", :'data-id' => task_status_code(:resolved)}
+    .name= :resolved.to_s.titleize
+    .tasks{:class => 'task_card_container'}
+      - @archived_tasks.each do |archived_task|
+        = render "tasks/task_card", :task => archived_task, :project => @current_project
